@@ -1,0 +1,34 @@
+                  //count No Of vowel,consonants,spaces and digits.
+#include<iostream>
+#include<cstring>
+#include<ctype.h>
+#include<string>
+using namespace std;
+int main()
+{
+	  char a[60],c;
+	  int v=0,co=0,d=0,s=0,ot=0;
+	  cout<<"Enter The Sring";
+	  cin.get(a,60);
+	  for(int i=0;a[i]!='\0';i++)
+	  {
+	  	c=toupper(a[i]);
+	  	if(c=='A'|| c=='E'|| c=='I'|| c=='O'|| c=='U')
+	  	 ++v;
+	  	else if(c>='A' && c<='z')
+		  ++co;
+		else if(c >='0' && c<='9')
+		  ++d;
+		else if(c==' ' || c=='\t')
+		++s;
+		else
+		++ot;
+	}
+		cout<<"No Of vowels:"<<" "<<v<<endl;
+		cout<<"No Of Consonents:"<<" "<<co<<endl;
+		cout<<"No Of Digits:"<<" "<<d<<endl;
+		cout<<"No Of Space:"<<" "<<s<<endl;
+		cout<<"N OfOther Characters:"<<" "<<ot<<endl;
+		return 0;		
+	    
+ }                  
